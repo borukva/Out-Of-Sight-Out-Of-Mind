@@ -36,7 +36,8 @@ public class IgnoreConfig {
   private final ConcurrentHashMap<UUID, Set<UUID>> ignoreLists = new ConcurrentHashMap<>();
 
   private IgnoreConfig() {
-    this.configPath = FabricLoader.getInstance().getConfigDir().resolve(ModInit.MOD_ID + ".json");
+    this.configPath =
+        FabricLoader.getInstance().getConfigDir().resolve(ModInit.MOD_ID).resolve("ignores.json");
   }
 
   public static IgnoreConfig getInstance() {

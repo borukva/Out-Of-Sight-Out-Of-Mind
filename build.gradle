@@ -26,9 +26,6 @@ spotless {
 }
 
 repositories {
-    maven { url 'https://maven.nucleoid.xyz' }
-    maven { url 'https://jitpack.io' }
-    maven { url "https://api.modrinth.com/maven" }
     mavenCentral()
 }
 
@@ -44,11 +41,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    modImplementation("eu.pb4:polymer-core:[${project.polymer_version}]")
-    modImplementation("eu.pb4:polymer-blocks:[${project.polymer_version}]")
-    modImplementation("eu.pb4:polymer-resource-pack:[${project.polymer_version}]")
-    modImplementation("eu.pb4:polymer-virtual-entity:[${project.polymer_version}]")
-    modImplementation("eu.pb4:polymer-autohost:${project.polymer_version}")
+    include(modImplementation "me.lucko:fabric-permissions-api:${permissions_api}")
 }
 
 processResources {

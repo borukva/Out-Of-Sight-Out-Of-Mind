@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.borukva.outofsightoutofmind.command.ModCommands;
 import ua.borukva.outofsightoutofmind.config.IgnoreConfig;
+import ua.borukva.outofsightoutofmind.config.MessagesConfig;
 
 public class ModInit implements ModInitializer {
   public static final String MOD_ID = "outofsightoutofmind";
@@ -23,6 +24,7 @@ public class ModInit implements ModInitializer {
 
     ServerLifecycleEvents.SERVER_STARTING.register(
         server -> {
+          MessagesConfig.getInstance().load();
           IgnoreConfig.getInstance().load();
         });
 
