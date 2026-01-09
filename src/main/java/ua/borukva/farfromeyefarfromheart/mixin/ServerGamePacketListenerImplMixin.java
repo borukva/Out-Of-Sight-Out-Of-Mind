@@ -14,8 +14,7 @@ import ua.borukva.farfromeyefarfromheart.chat.ChatFilterService;
 
 @Mixin(ServerGamePacketListenerImpl.class)
 public abstract class ServerGamePacketListenerImplMixin {
-  @Shadow
-  public ServerPlayer player;
+  @Shadow public ServerPlayer player;
 
   @Inject(
       method =
