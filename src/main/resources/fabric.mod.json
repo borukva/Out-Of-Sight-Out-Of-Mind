@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "farfromeyefarfromheart",
+	"version": "${version}",
+	"name": "farfromeyefarfromheart",
+	"description": "farfromeyefarfromheart mod.",
+	"authors": [
+		"Borukva Team"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "ARR",
+	"icon": "assets/farfromeyefarfromheart/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "ua.borukva.farfromeyefarfromheart.ModInit"
+		]
+	},
+	"mixins": [
+		"farfromeyefarfromheart.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
