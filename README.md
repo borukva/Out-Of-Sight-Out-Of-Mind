@@ -1,4 +1,4 @@
-# Far From Eye Far From Heart
+# Out Of Sight, Out Of Mind
 
 A server-side Minecraft Fabric mod that allows players to ignore other players' chat messages.
 
