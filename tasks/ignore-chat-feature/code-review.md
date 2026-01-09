@@ -18,7 +18,7 @@ The implementation is generally solid with good use of thread-safe collections a
 
 ### 1. IgnoreConfig.java
 
-**Path:** `/mnt/c/Users/mryur/projects/farfromeyefarfromheart/src/main/java/ua/borukva/farfromeyefarfromheart/config/IgnoreConfig.java`
+**Path:** `/mnt/c/Users/mryur/projects/outofsightoutofmind/src/main/java/ua/borukva/outofsightoutofmind/config/IgnoreConfig.java`
 
 #### Issue 1: Race Condition in removeIgnore()
 - **Severity:** Medium
@@ -64,7 +64,7 @@ The implementation is generally solid with good use of thread-safe collections a
 
 ### 2. ChatFilterService.java
 
-**Path:** `/mnt/c/Users/mryur/projects/farfromeyefarfromheart/src/main/java/ua/borukva/farfromeyefarfromheart/chat/ChatFilterService.java`
+**Path:** `/mnt/c/Users/mryur/projects/outofsightoutofmind/src/main/java/ua/borukva/outofsightoutofmind/chat/ChatFilterService.java`
 
 #### No Issues Found
 - **Assessment:** This file is simple and well-designed. The logic correctly checks if the recipient is ignoring the sender. The predicate creation is clean and stateless.
@@ -73,7 +73,7 @@ The implementation is generally solid with good use of thread-safe collections a
 
 ### 3. PlayerListMixin.java
 
-**Path:** `/mnt/c/Users/mryur/projects/farfromeyefarfromheart/src/main/java/ua/borukva/farfromeyefarfromheart/mixin/PlayerListMixin.java`
+**Path:** `/mnt/c/Users/mryur/projects/outofsightoutofmind/src/main/java/ua/borukva/outofsightoutofmind/mixin/PlayerListMixin.java`
 
 #### Issue 5: Null Check for Sender Only
 - **Severity:** Low
@@ -99,7 +99,7 @@ The implementation is generally solid with good use of thread-safe collections a
 
 ### 4. IgnoreCommand.java
 
-**Path:** `/mnt/c/Users/mryur/projects/farfromeyefarfromheart/src/main/java/ua/borukva/farfromeyefarfromheart/command/IgnoreCommand.java`
+**Path:** `/mnt/c/Users/mryur/projects/outofsightoutofmind/src/main/java/ua/borukva/outofsightoutofmind/command/IgnoreCommand.java`
 
 #### Issue 7: Missing Permission Check
 - **Severity:** Medium
@@ -126,7 +126,7 @@ The implementation is generally solid with good use of thread-safe collections a
 
 ### 5. ModInit.java
 
-**Path:** `/mnt/c/Users/mryur/projects/farfromeyefarfromheart/src/main/java/ua/borukva/farfromeyefarfromheart/ModInit.java`
+**Path:** `/mnt/c/Users/mryur/projects/outofsightoutofmind/src/main/java/ua/borukva/outofsightoutofmind/ModInit.java`
 
 #### Issue 10: Config Load on Server Thread
 - **Severity:** Low

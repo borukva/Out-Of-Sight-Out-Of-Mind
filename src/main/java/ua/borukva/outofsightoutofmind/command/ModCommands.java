@@ -1,4 +1,4 @@
-package ua.borukva.farfromeyefarfromheart.command;
+package ua.borukva.outofsightoutofmind.command;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
@@ -11,7 +11,7 @@ import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
-import ua.borukva.farfromeyefarfromheart.config.IgnoreConfig;
+import ua.borukva.outofsightoutofmind.config.IgnoreConfig;
 
 public class ModCommands {
 

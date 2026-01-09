@@ -20,4 +20,4 @@ This mod is compatible with:
 
 The mod intercepts chat messages at the network handler level (`ServerGamePacketListenerImpl.sendPlayerChatMessage`) before they are sent to each player. If the recipient has the sender on their ignore list, the message is cancelled for that specific player.
 
-Ignore lists are stored persistently in `config/farfromeyefarfromheart.json`. Saving occurs during server shutdown.
+Ignore lists are stored persistently in `config/outofsightoutofmind.json`. Saving occurs during server shutdown.

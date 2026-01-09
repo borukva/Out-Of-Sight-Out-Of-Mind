@@ -9,7 +9,7 @@ This plan details the implementation of a server-side chat ignore system for a M
 ### New Files to Create
 
 ```
-src/main/java/ua/borukva/farfromeyefarfromheart/
+src/main/java/ua/borukva/outofsightoutofmind/
 ├── config/
 │   └── IgnoreConfig.java          # Thread-safe config management
 ├── command/
@@ -23,18 +23,18 @@ src/main/java/ua/borukva/farfromeyefarfromheart/
 ### Files to Modify
 
 ```
-src/main/java/ua/borukva/farfromeyefarfromheart/
+src/main/java/ua/borukva/outofsightoutofmind/
 └── ModInit.java                   # Initialize config and commands
 
 src/main/resources/
-└── farfromeyefarfromheart.mixins.json  # Register new mixin
+└── outofsightoutofmind.mixins.json  # Register new mixin
 ```
 
 ### Config File (Runtime Generated)
 
 ```
 config/
-└── farfromeyefarfromheart.json   # Persistent ignore lists
+└── outofsightoutofmind.json   # Persistent ignore lists
 ```
 
 ---
@@ -43,14 +43,14 @@ config/
 
 ### Step 1: Create IgnoreConfig Class
 
-**File:** `src/main/java/ua/borukva/farfromeyefarfromheart/config/IgnoreConfig.java`
+**File:** `src/main/java/ua/borukva/outofsightoutofmind/config/IgnoreConfig.java`
 
 **Purpose:** Thread-safe management of player ignore lists with JSON persistence.
 
 **Implementation Details:**
 
 ```java
-package ua.borukva.farfromeyefarfromheart.config;
+package ua.borukva.outofsightoutofmind.config;
 
 // Key components:
 // - ConcurrentHashMap<UUID, Set<UUID>> for thread-safe in-memory storage
@@ -91,14 +91,14 @@ private final ConcurrentHashMap<UUID, Set<UUID>> ignoreLists = new ConcurrentHas
 
 ### Step 2: Create ChatFilterService Class
 
-**File:** `src/main/java/ua/borukva/farfromeyefarfromheart/chat/ChatFilterService.java`
+**File:** `src/main/java/ua/borukva/outofsightoutofmind/chat/ChatFilterService.java`
 
 **Purpose:** Service layer for ignore list queries, used by the mixin.
 
 **Implementation Details:**
 
 ```java
-package ua.borukva.farfromeyefarfromheart.chat;
+package ua.borukva.outofsightoutofmind.chat;
 
 // Provides simple interface for mixin to query ignore status
 // Decouples mixin from config implementation
@@ -116,7 +116,7 @@ package ua.borukva.farfromeyefarfromheart.chat;
 
 ### Step 3: Create PlayerManagerMixin
 
-**File:** `src/main/java/ua/borukva/farfromeyefarfromheart/mixin/PlayerManagerMixin.java`
+**File:** `src/main/java/ua/borukva/outofsightoutofmind/mixin/PlayerManagerMixin.java`
 
 **Purpose:** Intercept chat broadcast to filter messages per-recipient.
 
@@ -191,7 +191,7 @@ public abstract class PlayerManagerMixin {
 
 ### Step 4: Create IgnoreCommand Class
 
-**File:** `src/main/java/ua/borukva/farfromeyefarfromheart/command/IgnoreCommand.java`
+**File:** `src/main/java/ua/borukva/outofsightoutofmind/command/IgnoreCommand.java`
 
 **Purpose:** Register and handle `/ignore` commands.
 
@@ -205,7 +205,7 @@ public abstract class PlayerManagerMixin {
 **Implementation Details:**
 
 ```java
-package ua.borukva.farfromeyefarfromheart.command;
+package ua.borukva.outofsightoutofmind.command;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
@@ -274,23 +274,23 @@ public class IgnoreCommand {
 
 ### Step 5: Update ModInit
 
-**File:** `src/main/java/ua/borukva/farfromeyefarfromheart/ModInit.java`
+**File:** `src/main/java/ua/borukva/outofsightoutofmind/ModInit.java`
 
 **Changes:**
 
 ```java
-package ua.borukva.farfromeyefarfromheart;
+package ua.borukva.outofsightoutofmind;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.borukva.farfromeyefarfromheart.command.ModCommands;
-import ua.borukva.farfromeyefarfromheart.config.IgnoreConfig;
+import ua.borukva.outofsightoutofmind.command.ModCommands;
+import ua.borukva.outofsightoutofmind.config.IgnoreConfig;
 
 public class ModInit implements ModInitializer {
-  public static final String MOD_ID = "farfromeyefarfromheart";
+  public static final String MOD_ID = "outofsightoutofmind";
   public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
   @Override
@@ -321,14 +321,14 @@ public class ModInit implements ModInitializer {
 
 ### Step 6: Update Mixin Configuration
 
-**File:** `src/main/resources/farfromeyefarfromheart.mixins.json`
+**File:** `src/main/resources/outofsightoutofmind.mixins.json`
 
 **Changes:**
 
 ```json
 {
   "required": true,
-  "package": "ua.borukva.farfromeyefarfromheart.mixin",
+  "package": "ua.borukva.outofsightoutofmind.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "ExampleMixin"
@@ -430,7 +430,7 @@ Player A sends chat message
 
 ### JSON Format
 
-**File:** `config/farfromeyefarfromheart.json`
+**File:** `config/outofsightoutofmind.json`
 
 ```json
 {
@@ -463,10 +463,10 @@ Player A sends chat message
 ```java
 Path configPath = FabricLoader.getInstance()
     .getConfigDir()
-    .resolve("farfromeyefarfromheart.json");
+    .resolve("outofsightoutofmind.json");
 
 // Typical path on server:
-// server_directory/config/farfromeyefarfromheart.json
+// server_directory/config/outofsightoutofmind.json
 ```
 
 ---
@@ -641,7 +641,7 @@ Component.literal("Ignored players: " + String.join(", ", names))
 1. **IgnoreConfig.java** - Foundation for all other components
 2. **ChatFilterService.java** - Service layer before mixin
 3. **PlayerManagerMixin.java** - Core filtering logic
-4. **Update farfromeyefarfromheart.mixins.json** - Register mixin
+4. **Update outofsightoutofmind.mixins.json** - Register mixin
 5. **IgnoreCommand.java** - User-facing commands
 6. **Update ModInit.java** - Wire everything together
 7. **Testing** - Verify all functionality

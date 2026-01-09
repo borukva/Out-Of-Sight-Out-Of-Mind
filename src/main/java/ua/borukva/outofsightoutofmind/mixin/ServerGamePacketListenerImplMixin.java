@@ -1,4 +1,4 @@
-package ua.borukva.farfromeyefarfromheart.mixin;
+package ua.borukva.outofsightoutofmind.mixin;
 
 import java.util.UUID;
 import net.minecraft.network.chat.ChatType;
@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import ua.borukva.farfromeyefarfromheart.chat.ChatFilterService;
+import ua.borukva.outofsightoutofmind.chat.ChatFilterService;
 
 @Mixin(ServerGamePacketListenerImpl.class)
 public abstract class ServerGamePacketListenerImplMixin {
@@ -21,7 +21,7 @@ public abstract class ServerGamePacketListenerImplMixin {
           "sendPlayerChatMessage(Lnet/minecraft/network/chat/PlayerChatMessage;Lnet/minecraft/network/chat/ChatType$Bound;)V",
       at = @At("HEAD"),
       cancellable = true)
-  private void farfromeyefarfromheart$filterIgnoredMessages(
+  private void outofsightoutofmind$filterIgnoredMessages(
       PlayerChatMessage message, ChatType.Bound boundChatType, CallbackInfo ci) {
     UUID senderUuid = message.link().sender();
 

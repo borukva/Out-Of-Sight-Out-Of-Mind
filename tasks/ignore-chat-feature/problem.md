@@ -9,7 +9,7 @@ Build a **server-side** Minecraft Fabric mod that allows players to ignore other
 ### Core Functionality
 
 1. **Ignore System**: Players can maintain a personal list of ignored players whose chat messages will be hidden from their view
-2. **Persistent Storage**: Ignore lists stored in JSON format at `config/farfromeyefarfromheart.json` in the server's config directory (not mod folder)
+2. **Persistent Storage**: Ignore lists stored in JSON format at `config/outofsightoutofmind.json` in the server's config directory (not mod folder)
 3. **Storage Format**: JSON structure as `"uuid_of_ignoring_person": [<list of uuid of ignored players>]`
 4. **Server-Side Operation**: Mod operates on the server, intercepting chat message broadcast and filtering per-recipient
 
@@ -106,8 +106,8 @@ Implement three server commands under the `/ignore` namespace:
 
 4. **Config Location Specification**: "config (located inside minecraft folder, not mod folder)"
    - **Assumption**: Use standard Fabric config directory on the server
-   - Path: `FabricLoader.getInstance().getConfigDir().resolve("farfromeyefarfromheart.json")`
-   - On server, this is typically `server_directory/config/farfromeyefarfromheart.json`
+   - Path: `FabricLoader.getInstance().getConfigDir().resolve("outofsightoutofmind.json")`
+   - On server, this is typically `server_directory/config/outofsightoutofmind.json`
 
 5. **Message Filtering Scope**: What types of messages to filter?
    - **Assumption**: Filter chat messages from ignored players (regular chat). May also need to filter:

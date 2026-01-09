@@ -1,9 +1,9 @@
-package ua.borukva.farfromeyefarfromheart.chat;
+package ua.borukva.outofsightoutofmind.chat;
 
 import java.util.UUID;
 import java.util.function.Predicate;
 import net.minecraft.server.level.ServerPlayer;
-import ua.borukva.farfromeyefarfromheart.config.IgnoreConfig;
+import ua.borukva.outofsightoutofmind.config.IgnoreConfig;
 
 public class ChatFilterService {
 

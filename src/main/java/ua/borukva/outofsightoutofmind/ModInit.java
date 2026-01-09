@@ -1,15 +1,15 @@
-package ua.borukva.farfromeyefarfromheart;
+package ua.borukva.outofsightoutofmind;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.borukva.farfromeyefarfromheart.command.ModCommands;
-import ua.borukva.farfromeyefarfromheart.config.IgnoreConfig;
+import ua.borukva.outofsightoutofmind.command.ModCommands;
+import ua.borukva.outofsightoutofmind.config.IgnoreConfig;
 
 public class ModInit implements ModInitializer {
-  public static final String MOD_ID = "farfromeyefarfromheart";
+  public static final String MOD_ID = "outofsightoutofmind";
   public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
   @Override

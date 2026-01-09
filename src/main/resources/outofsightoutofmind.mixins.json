@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "ua.borukva.farfromeyefarfromheart.mixin",
+  "package": "ua.borukva.outofsightoutofmind.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
   "server": [

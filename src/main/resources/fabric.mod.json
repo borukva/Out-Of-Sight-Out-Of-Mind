@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "farfromeyefarfromheart",
+	"id": "outofsightoutofmind",
 	"version": "${version}",
-	"name": "farfromeyefarfromheart",
-	"description": "farfromeyefarfromheart mod.",
+	"name": "outofsightoutofmind",
+	"description": "outofsightoutofmind mod.",
 	"authors": [
 		"Borukva Team"
 	],
@@ -12,15 +12,15 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "ARR",
-	"icon": "assets/farfromeyefarfromheart/icon.png",
+	"icon": "assets/outofsightoutofmind/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "ua.borukva.farfromeyefarfromheart.ModInit"
+          "ua.borukva.outofsightoutofmind.ModInit"
 		]
 	},
 	"mixins": [
-		"farfromeyefarfromheart.mixins.json"
+		"outofsightoutofmind.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.17.2",

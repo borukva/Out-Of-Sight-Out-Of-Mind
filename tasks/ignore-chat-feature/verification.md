@@ -60,9 +60,9 @@ Storage implementation in `IgnoreConfig.java` meets all requirements:
 - **Evidence:** Lines 34-35 in `IgnoreConfig.java`
   ```java
   this.configPath =
-      FabricLoader.getInstance().getConfigDir().resolve("farfromeyefarfromheart.json");
+      FabricLoader.getInstance().getConfigDir().resolve("outofsightoutofmind.json");
   ```
-- **Location:** `config/farfromeyefarfromheart.json` (Fabric's config directory)
+- **Location:** `config/outofsightoutofmind.json` (Fabric's config directory)
 
 #### JSON Format - PASS
 - **Evidence:** Lines 76-83 in `IgnoreConfig.java` (save method)

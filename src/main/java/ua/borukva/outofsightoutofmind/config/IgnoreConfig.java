@@ -1,4 +1,4 @@
-package ua.borukva.farfromeyefarfromheart.config;
+package ua.borukva.outofsightoutofmind.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -19,7 +19,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArraySet;
 import net.fabricmc.loader.api.FabricLoader;
-import ua.borukva.farfromeyefarfromheart.ModInit;
+import ua.borukva.outofsightoutofmind.ModInit;
 
 public class IgnoreConfig {
   private static final IgnoreConfig INSTANCE = new IgnoreConfig();
@@ -32,7 +32,7 @@ public class IgnoreConfig {
 
   private IgnoreConfig() {
     this.configPath =
-        FabricLoader.getInstance().getConfigDir().resolve("farfromeyefarfromheart.json");
+        FabricLoader.getInstance().getConfigDir().resolve("outofsightoutofmind.json");
   }
 
   public static IgnoreConfig getInstance() {

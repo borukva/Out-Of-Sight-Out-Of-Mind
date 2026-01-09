@@ -22,7 +22,7 @@ A server-side Minecraft Fabric mod feature that allows players to ignore other p
 | `/ignore list` | View all currently ignored players |
 
 ### Storage
-- **Location:** `config/farfromeyefarfromheart.json`
+- **Location:** `config/outofsightoutofmind.json`
 - **Format:** UUID-based JSON for robustness against name changes
 ```json
 {
@@ -52,7 +52,7 @@ A server-side Minecraft Fabric mod feature that allows players to ignore other p
 | File | Changes |
 |------|---------|
 | `ModInit.java` | Added lifecycle events and command registration |
-| `farfromeyefarfromheart.mixins.json` | Added PlayerListMixin to server array |
+| `outofsightoutofmind.mixins.json` | Added PlayerListMixin to server array |
 
 ---
 
@@ -106,7 +106,7 @@ Manual testing steps for verification:
 BUILD SUCCESSFUL
 ```
 
-JAR location: `build/libs/farfromeyefarfromheart-*.jar`
+JAR location: `build/libs/outofsightoutofmind-*.jar`
 
 ---
 

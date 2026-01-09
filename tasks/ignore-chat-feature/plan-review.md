@@ -1,7 +1,7 @@
 # Plan Review: Server-Side Chat Ignore Feature
 
 **Reviewed:** 2026-01-09
-**Plan Path:** `/mnt/c/Users/mryur/projects/farfromeyefarfromheart/tasks/ignore-chat-feature/plan.md`
+**Plan Path:** `/mnt/c/Users/mryur/projects/outofsightoutofmind/tasks/ignore-chat-feature/plan.md`
 
 ---
 
