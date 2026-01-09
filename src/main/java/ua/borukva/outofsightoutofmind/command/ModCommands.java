@@ -1,3 +1,8 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
 package ua.borukva.outofsightoutofmind.command;
 
 import com.mojang.brigadier.CommandDispatcher;
@@ -109,7 +114,7 @@ public class ModCommands {
     for (UUID ignoredUuid : ignoredPlayers) {
       ServerPlayer ignoredPlayer =
           context.getSource().getServer().getPlayerList().getPlayer(ignoredUuid);
-      if (names.length() > 0) {
+      if (!names.isEmpty()) {
         names.append(", ");
       }
       if (ignoredPlayer != null) {

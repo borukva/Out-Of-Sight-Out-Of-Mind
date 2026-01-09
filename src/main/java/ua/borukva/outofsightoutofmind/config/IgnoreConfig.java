@@ -1,3 +1,8 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
 package ua.borukva.outofsightoutofmind.config;
 
 import com.google.gson.Gson;
@@ -31,8 +36,7 @@ public class IgnoreConfig {
   private final ConcurrentHashMap<UUID, Set<UUID>> ignoreLists = new ConcurrentHashMap<>();
 
   private IgnoreConfig() {
-    this.configPath =
-        FabricLoader.getInstance().getConfigDir().resolve("outofsightoutofmind.json");
+    this.configPath = FabricLoader.getInstance().getConfigDir().resolve(ModInit.MOD_ID + ".json");
   }
 
   public static IgnoreConfig getInstance() {

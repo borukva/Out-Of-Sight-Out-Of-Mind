@@ -1,4 +1,4 @@
-# Far From Eye Far From Heart
+# Out Of Sight, Out Of Mind
 
 Minecraft Fabric mod using the Polymer library.
 

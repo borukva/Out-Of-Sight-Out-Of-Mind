@@ -11,7 +11,7 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "ARR",
+	"license": "MPL 2.0",
 	"icon": "assets/outofsightoutofmind/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -24,7 +24,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.17.2",
-		"minecraft": "~1.21.10",
+		"minecraft": ">=1.21.10",
 		"java": ">=21",
 		"fabric-api": "*"
 	},
